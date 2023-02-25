@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Prata&family=Roboto:wght@400;500&display=swap");
+
+@import "variables.scss";
+@import "reset.scss";
+
+@import "templates.scss";
+
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/landing.scss";
+@import "components/logo.scss";
+@import "components/footer.scss";
+@import "components/news.scss";
+@import "components/popular-models.scss";
+@import "components/quality.scss";
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-dark;
+}
+
+a {
+  cursor: pointer;
+}

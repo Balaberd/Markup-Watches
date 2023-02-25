@@ -1,0 +1,121 @@
+.header {
+  background-color: $color-snow;
+
+  z-index: 10;
+
+  @media (max-width: 860px) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    border-top: 1px solid $color-pink-gold;
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    width: 1160px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1280px) {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-light-gray;
+  }
+
+  &__nav {
+    @media (max-width: 860px) {
+      display: none;
+    }
+  }
+
+  &__links-block {
+    display: flex;
+    gap: 65px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__control-bottons {
+    display: flex;
+    gap: 23px;
+
+    .header__icon {
+      color: $color-dark;
+      position: relative;
+      cursor: pointer;
+    }
+  }
+  .count {
+    width: 13px;
+    height: 13px;
+    background-color: $color-pink-gold;
+    border-radius: 50%;
+
+    font-size: 8px;
+    line-height: 9px;
+
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__mobile-menu {
+    display: none;
+    position: relative;
+    z-index: 10;
+
+    @media (max-width: 860px) {
+      display: block;
+    }
+  }
+}
+
+.mobile-menu {
+  &__checkbox {
+    display: none;
+  }
+  &__menu {
+    display: none;
+
+    padding: 10px 15px;
+
+    background-color: $color-snow;
+    border-radius: 10px;
+    border: 1px solid $color-pink-gold;
+
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    z-index: 10;
+
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__checkbox:checked ~ .mobile-menu__menu {
+    display: flex;
+  }
+  &__link-item {
+    font-family: "Playfair Display";
+    width: 100%;
+    font-size: 26px;
+    font-weight: 30px;
+  }
+}
